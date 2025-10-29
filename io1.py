@@ -2,7 +2,7 @@
 
 
 def input_size()->int|bool:
-    size=input('Please enter a number')
+    size=input('Please enter a size')
     try:
         size=int(size)
     except:
@@ -11,13 +11,13 @@ def input_size()->int|bool:
     if (size **2) % 2 !=0:
         print("The package is not even.")
         size=input_size()
-    return size
+    return size,
 
 
 def input_cards()->list:
     card=[]
-    card.append(input())
-    card.append(input())
+    card.append(input("x"))
+    card.append(input("y"))
     try:
         card[0]=int(card[0])
         card[1]=int(card[1])
@@ -28,7 +28,9 @@ def input_cards()->list:
 
 
 def print_metrix(deck)->None:
+    print(f"{"=":3}"*len(deck))
     for i in deck:
         for j in i:
-            print(j,end=" ")
+            print(f"{j:2}",end=" ")
         print()
+    print(f"{"=":3}"*len(deck))
