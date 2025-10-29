@@ -11,7 +11,7 @@ def input_size()->int|bool:
     if (size **2) % 2 !=0:
         print("The package is not even.")
         size=input_size()
-    return size,
+    return size
 
 
 def input_cards()->list:
